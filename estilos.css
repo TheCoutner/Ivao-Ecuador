@@ -1,0 +1,453 @@
+@import url(http://fonts.googleapis.com/css=family=Open+Sans);
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: boder-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    background: #fff;
+    font-family: sans-serif;
+}
+
+.menu_bar {
+    display: none;
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    z-index: 1000;
+    max-width: 100%;
+    width: 100%;
+    position: static;
+}
+
+.submenu p {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px 14px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header nav ul li p span {
+    margin-right: 10px;
+}
+
+header nav ul {
+    text-align: right;
+    background: rgba(0,53,133,1);
+    transition: all 2s;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+    transition: all 2s;
+    
+}
+
+
+
+ .titulo {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10%;
+    color: #fff;
+}
+
+.logop {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+header nav ul li:hover {
+    background: rgba(221,218,218,0.5);
+    
+    
+}
+
+header nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px 14px;
+    font-size: 16px;
+    
+}
+
+
+header nav ul li a span {
+    margin-right: 10px;
+}
+
+header nav ul li:hover .children {
+    display: block;
+    text-align: left;
+    
+}
+
+header nav ul li .children {
+    display: none;
+    background: #011826;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    
+    
+}
+
+header nav ul li .children li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+
+    
+}
+
+header nav ul li .children li a {
+    display:block;
+    
+}
+
+
+
+#contenedor_carga {
+    background: rgba(250,240,245,0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+    z-index: 10000;
+}
+
+
+
+#carga {
+    border: 40px solid #ccc;
+    border-top-color: #039807;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius:100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 2.5s linear infinite;
+    -o-animation: girar 2.5s linear infinite;
+    animation: girar 2.5s linear infinite;
+}
+
+
+#carga span {
+    position: absolute;
+    -webkit-animation: girar2 41.6s linear infinite;
+    -o-animation: girar2 41.6s linear infinite;
+    animation: girar2 41.6s linear infinite;
+}
+
+
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+@keyframes girar2 {
+    from {transform: rotate(45deg);}
+    to { transform: rotate(360deg);}
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(90vh - 59px);
+    background-color: #F5F5F5;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5 ease-in-out;
+    background-image: url('../assets/img/1.jpg');
+    animation: banner 26s infinite linear;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+
+
+.banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0,22,40,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 45%;
+    border-top-left-radius: 20%
+    
+    
+}
+
+.banner-content h1 {
+    margin-top: 40px;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.banner-content a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 4px;
+    font-family: consolas;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.banner-content a:hover {
+    color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 1px #2196f3, 0 0 5px #2196f3, 0 0 10px #2196f3;
+  transition-delay: 1s;
+}
+
+.banner-content a span{
+  position: absolute;
+  display: block;
+}
+.banner-content a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+.banner-content a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+.banner-content a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#2196f3);
+}
+.banner-content a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.banner-content a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#2196f3);
+}
+.banner-content a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.banner-content a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#2196f3);
+}
+.banner-content a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.new_info {
+    text-align: center;
+    margin-top: 12px;
+    padding-bottom: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background:#1B4F72;
+    box-shadow: 0px 3px 0px #5DADE2;
+    z-index: 1400;
+    
+}
+
+.new_info p{
+    padding-top: 8px;
+    color: #fff;
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 18px;
+    
+}
+
+
+.ir-arriba {
+    display: none;
+    padding: 20px;
+    background: #024959;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 43px;
+    right: 28px;
+    z-index: 1200;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1350px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .titulo {
+        display: none;
+    }
+    
+    .logop {
+        display: none;
+    }
+    
+    .logom {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    margin-top: 5.8px;
+    margin-left: 2%;
+     
+    }
+    
+    .titulom {
+    display: inline-block;
+    position: absolute;
+    margin-left: 13%;
+    text-align: center;
+    }
+    
+    
+
+    .menu_bar {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: rgba(0,53,133,1);
+        z-index: 2000;
+    }
+    
+    .banner-content h1 {
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .menu_bar span {
+        float: right;
+        font-size: 40px;
+        margin-top: -10px;
+    }
+    
+    header {
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    box-shadow: none;
+}
+    
+    header nav {
+        width: 80%;
+        height: calc(100% - 80px);
+        position: fixed;
+        right:100%;
+        margin: 0;
+        overflow: scroll;
+        background: rgba(0,53,133,1);
+        
+        
+    }
+    
+    header nav ul li {
+        display: block;
+        text-align: left;
+        height: 100%;
+        background: rgba(0,53,133,1);
+        color: #fff;
+        
+        
+    }
+    
+    header nav ul li a {
+        display: block;
+        color: #fff;
+        
+    }
+    
+    header nav ul li:hover .children {
+        display: none;
+    }
+    
+    header nav ul li .children {
+        width: 100%;
+        position: relative;
+
+    }
+    
+    header nav ul li .children li a {
+        margin-left: 20px;
+        transition: all .3s;
+        
+    }
+}
